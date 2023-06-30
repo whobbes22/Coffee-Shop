@@ -66,6 +66,10 @@ class CoffeeControl extends React.Component {
     });
   }
 
+  handleAddSack = () =>{
+    
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
