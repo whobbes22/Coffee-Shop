@@ -26,7 +26,7 @@ function NewCoffeeForm(props){
 }
 
 NewCoffeeForm.propTypes ={
-  onNewCoffeCreation: PropTypes.func
+  onNewCoffeeCreation: PropTypes.func
 };
 
 export default NewCoffeeForm;
