@@ -13,21 +13,21 @@ function EditCoffeeForm(props) {
       origin: event.target.origin.value,
       price: event.target.price.value,
       roast: event.target.roast.value,
-      id: Coffee.id
+      id: props.coffee.id
     });
   }
     return (
       <React.Fragment>
         <ReusableForm
           formSubmissionHandler={handleNewCoffeeFormSubmission}
-          buttonText="Edit Whale" />
+          buttonText="Edit coffee" />
       </React.Fragment>
     );
 }
 
 EditCoffeeForm.propTypes = {
-  whale: PropTypes.object,
-  onEditWhale: PropTypes.func
+  coffee: PropTypes.object,
+  onEditCoffee: PropTypes.func
 };
 
 export default EditCoffeeForm;

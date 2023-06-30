@@ -2,6 +2,7 @@ import React from 'react';
 import CoffeeList from './CoffeeList';
 import NewCoffeeForm from './NewCoffeeForm';
 import CoffeeDetail from './CoffeeDetail';
+import EditCoffeeForm from './EditCoffeeForm';
 
 class CoffeeControl extends React.Component {
   
@@ -52,7 +53,7 @@ class CoffeeControl extends React.Component {
     })
   }
   
-  handleEditingCoffe = (editedCoffee) => {
+  handleEditingCoffee = (editedCoffee) => {
     const editCoffee = this.state.mainCoffeeList.filter(c => c.id !== this.state.selectedCoffee.id).concat(editedCoffee)
     this.setState({
       mainCoffeeList: editCoffee,
@@ -65,8 +66,12 @@ class CoffeeControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
 
+    if(this.state.editing){
+      currentlyVisibleState = <EditCoffeeForm coffee = {this.state.selectedCoffee} onEditCoffee={this.handleEditingCoffee}/>
+      buttonText="Return to Coffee List";
+    }
     if(this.state.selectedCoffee != null){
-      currentlyVisibleState = <CoffeeDetail coffee={this.state.selectedCoffee} onClickingDelete = {this.handleDeletingCoffee} onClickingEdit={this.handleEditingCoffe}/>
+      currentlyVisibleState = <CoffeeDetail coffee={this.state.selectedCoffee} onClickingDelete = {this.handleDeletingCoffee} onClickingEdit={this.handleEditingCoffee}/>
       buttonText = "Return to Coffee List"
 
     } else if(this.state.formVisibleOnPage){
