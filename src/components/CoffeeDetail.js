@@ -19,7 +19,8 @@ function CoffeeDetail(props){
 
 CoffeeDetail.propTypes = {
   coffee: PropTypes.object,
-  onClickingDelete: PropTypes.func
+  onClickingDelete: PropTypes.func,
+  onClickingEdit: PropTypes.func
 }
 
 export default CoffeeDetail;
