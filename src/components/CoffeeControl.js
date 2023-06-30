@@ -69,13 +69,23 @@ class CoffeeControl extends React.Component {
   handleSellCoffee = (id) =>{
     let selectCoffee = this.state.mainCoffeeList.filter(c => c.id === id)[0];
     selectCoffee.poundsOfCoffee = selectCoffee.poundsOfCoffee -1;
+    console.log(selectCoffee.poundsOfCoffee,selectCoffee.poundsOfCoffee <0)
+    if(selectCoffee.poundsOfCoffee < 0){
+      selectCoffee.poundsOfCoffee = 0;
+    }
+    selectCoffee.sack = Math.ceil(selectCoffee.poundsOfCoffee / 130)
+    
     this.setState({selectedCoffee: selectCoffee});
   }
 
   handleAddSack = (id) => {
     let selectCoffee = this.state.mainCoffeeList.filter(c => c.id === id)[0];
-    selectCoffee.sack = selectCoffee.sack +1;
-    this.setState({selectedCoffee: selectCoffee});
+    selectCoffee.sack++;
+    selectCoffee.poundsOfCoffee = selectCoffee.poundsOfCoffee + 130;
+
+    this.setState({
+      selectedCoffee: selectCoffee,
+    });
   }
   
 
