@@ -1,4 +1,4 @@
-# _The Coffee Shop _
+# _The Coffee Shop_
 
 #### By _**Joseph Wahbeh**_
 
@@ -13,14 +13,13 @@
 
 ## Description
 
-_This is a web page application that allows a user to store information about various types of Coffee. You are allowed to add sacks of coffee which will add 130 lb's of coffee to the stock and sell 1 lb of coffee at a time._
+_This is a web page application that allows a user to store information about various types of Coffee. Clicking on the coffee after creating them allows you to go to the details section. Here you are allowed to add sacks of coffee which will add 130 lb's of coffee to the stock and sell 1 lb of coffee at a time._
 
 ## Setup/Installation Requirements
 
 * _Clone `Coffee-Shop` from the repository to desired location_
 * _Navigate to cloned directory via your local terminal command line_
 * _In terminal run the command `npm install`_
-* _In terminal run the command `npm run build`_
 * _In terminal run the command `npm start`_
 
 ## Known Bugs
